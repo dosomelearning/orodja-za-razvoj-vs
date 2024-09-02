@@ -1,26 +1,50 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+// src/App.tsx
 
-function App() {
+import React, { useState } from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import Header from './components/Header';
+import Footer from './components/Footer';
+import Sidebar from './components/Sidebar';
+import Home from './pages/Home';
+import About from './pages/About';
+import Search from './pages/Search';
+import BookManagementPage from "./pages/BookManagementPage";
+import DataManagementPage from "./pages/DataManagementPage";
+
+const App: React.FC = () => {
+  const [isEditMode, setIsEditMode] = useState(false);
+
+  const enterEditMode = () => setIsEditMode(true);
+  const exitEditMode = () => setIsEditMode(false);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+      <Router>
+        <div className="app">
+          <Header />
+          <div className="content-area">
+            {!isEditMode && <Sidebar />} {/* Conditionally render Sidebar */}
+            <main className="main-content">
+              <Routes>
+                <Route path="/" element={<Home />} />
+                <Route path="/about" element={<About />} />
+                <Route path="/search" element={<Search />} />
+                <Route
+                    path="/book-management"
+                    element={<BookManagementPage onEnterEditMode={enterEditMode} onExitEditMode={exitEditMode} />}
+                />
+                <Route
+                    path="/book-management/:bookId"
+                    element={<BookManagementPage onEnterEditMode={enterEditMode} onExitEditMode={exitEditMode} />}
+                />                <Route path="/data-management" element={<DataManagementPage />} />
+
+                {/* Add more routes here as needed */}
+              </Routes>
+            </main>
+          </div>
+          <Footer />
+        </div>
+      </Router>
   );
-}
+};
 
 export default App;

@@ -1,0 +1,72 @@
+.book-management-page {
+    display: flex;
+    flex-direction: column;
+    max-width: 900px;
+    margin: 20px auto;
+    padding: 20px;
+}
+
+.content-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.input-fields-panel {
+    flex: 3; /* 60% width */
+    margin-right: 20px;
+}
+
+.image-panel {
+    flex: 2; /* 40% width */
+    text-align: center;
+}
+
+.image-panel img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+}
+
+.status-bar {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    padding: 10px;
+    background-color: #f8f8f8;
+    border: 1px solid #ccc;
+}
+
+.button-panel {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.button-panel button {
+    background-color: #95bde8; /* Blue background */
+    color: white;
+
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+.button-panel button:hover {
+    background-color: #0056b3;
+    color: white;
+}

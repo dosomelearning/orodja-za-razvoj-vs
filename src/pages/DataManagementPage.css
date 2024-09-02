@@ -1,0 +1,44 @@
+/* src/pages/DataManagementPage.css */
+
+.form-container {
+    display: flex;
+    flex-direction: column;
+    max-width: 600px;
+    margin: 20px 0; /* Adjusted margin: 20px top/bottom, 0 left/right */
+    /*margin: auto;*/
+    padding: 20px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+}
+
+.button-group {
+    display: flex;
+    justify-content: space-between;
+}
+
+.button-group button {
+    padding: 10px 20px;
+    margin: 5px;
+    background-color: #95bde8; /* Blue background */
+    color: white;
+}
+
+.feedback-message p {
+    color: green;
+    font-weight: bold;
+}

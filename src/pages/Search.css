@@ -1,0 +1,153 @@
+/* src/pages/Search.css */
+
+/* Main search page layout */
+.search-page {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+/* Layout for the top row containing the filter and action panel */
+.search-page-top {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+/* Filter panel takes most of the space */
+.search-page-filter {
+    flex: 3;
+}
+
+/* Action panel positioned to the right of the filter */
+.search-page-actions {
+    flex: 1;
+    margin-left: 10px;
+}
+
+/* Status bar positioned below the top row */
+.search-page-status-bar {
+    background-color: #f4f4f4;
+    padding: 10px;
+    border: 1px solid #ddd;
+    margin-bottom: 10px;
+}
+
+/* Result grid positioned below the status bar */
+.search-page-results {
+    flex: 1;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* Filter Component Styling */
+.filter {
+    display: flex;
+    flex-direction: column;
+}
+
+.filter-top-section {
+    display: flex;
+/*    justify-content: space-between; */
+    justify-content: left;
+    margin-bottom: 10px;
+}
+
+.filter-bottom-section {
+    display: flex;
+    flex-direction: column;
+}
+
+.filter label {
+    margin-bottom: 10px;
+}
+
+.filter input[type="radio"] {
+    margin-right: 5px;
+}
+
+.filter input[type="text"],
+.filter select {
+    margin-left: 10px;
+    padding: 5px;
+    flex-grow: 1;
+    border: 1px solid #aaa;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+.filter button {
+    margin-bottom: 10px;
+    padding: 10px;
+    background-color: #95bde8; /* Blue background */
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-size: 16px;
+}
+
+.filter button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
+
+/* Result Grid Styling */
+.result-grid table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.result-grid th, .result-grid td {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+.result-grid th {
+    background-color: #f2f2f2;
+    text-align: left;
+}
+
+.result-grid tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.result-grid tr:hover {
+    background-color: #ddd;
+}
+
+.result-grid input[type="checkbox"] {
+    cursor: pointer;
+}
+
+
+/* Action Panel Styling */
+.action-panel {
+    display: flex;
+    flex-direction: column;
+}
+
+.action-panel button {
+    margin-bottom: 10px;
+    padding: 11px;
+    background-color: #95bde8; /* Blue background */
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-size: 16px;
+}
+
+.action-panel button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
